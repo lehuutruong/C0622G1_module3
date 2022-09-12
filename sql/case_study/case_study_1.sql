@@ -41,15 +41,6 @@ so_dien_thoai varchar(45),
 email varchar(45),
 dia_chi varchar(45)
 );
-create table hop_dong(
-ma_hop_dong int primary key,
-ngay_lam_hop_dong datetime,
-ngay_ket_thuc datetime,
-tien_dat_coc double,
-ma_nhan_vien int,
-ma_khach_hang int,
-ma_dich_vu int
-);
 create table loai_dich_vu(
 ma_loai_dich_vu int primary key,
 ten_loai_dich_vu varchar(45)
@@ -70,6 +61,15 @@ mo_ta_tien_nghi_khac varchar(45),
 dien_tich_ho_boi double,
 so_tang int,
 dich_vu_mien_phi_di_kem text
+);
+create table hop_dong(
+ma_hop_dong int primary key,
+ngay_lam_hop_dong datetime,
+ngay_ket_thuc datetime,
+tien_dat_coc double,
+ma_nhan_vien int,
+ma_khach_hang int,
+ma_dich_vu int
 );
 create table dich_vu_di_kem(
 ma_dich_vu_di_kem int primary key,
