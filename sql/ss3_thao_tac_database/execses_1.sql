@@ -76,5 +76,6 @@ VALUES (1, 1, 8, 1),
       select s.mark_id,s.mark,s.exam_times, c.sub_name,d.student_id
       from mark s 
       join subject c on s.sub_id=c.sub_id
-      join student d on s.sub_id=d.student_id;
-	
+      join student d on s.sub_id=d.student_id
+      order by mark desc,sub_name asc ;
+	 
