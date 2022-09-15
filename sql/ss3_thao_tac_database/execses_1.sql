@@ -78,4 +78,50 @@ VALUES (1, 1, 8, 1),
       join subject c on s.sub_id=c.sub_id
       join student d on s.sub_id=d.student_id
       order by mark desc,sub_name asc ;
-	 
+	 SELECT *
+FROM student;
+SELECT *
+FROM student
+WHERE status = true;
+
+SELECT *
+FROM subject
+WHERE credit < 10;
+
+SELECT s.student_id, s.student_name, c.class_name
+FROM student s join class c on s.class_id = c.class_id;
+
+SELECT s.student_id, s.student_name, c.class_name
+FROM student s join class c on s.class_id = c.class_id
+WHERE c.class_name = 'A1';
+
+SELECT s.student_id, s.student_name, sub.sub_name, m.mark
+FROM student s join mark m on s.student_id = m.student_id join subject sub on m.sub_id = sub.sub_id;
+SELECT s.student_id, s.student_name, sub.sub_name, m.mark
+FROM student s join mark m on s.student_id = m.student_id join subject sub on m.sub_id = sub.sub_id
+WHERE sub.sub_name = 'CF';
+
+SELECT address, COUNT(student_id) as 'Số lượng học viên'
+FROM student
+GROUP BY address;
+
+SELECT s.student_id, s.student_name, AVG(mark)
+FROM student s join mark m on  s.student_id = m.student_id
+GROUP BY s.student_id, s.student_name;
+
+SELECT s.student_id, s.student_name, AVG(mark)
+FROM student s join mark m on  s.student_id = m.student_id
+GROUP BY s.student_id, s.student_name
+HAVING AVG(mark) >= ALL (SELECT AVG(mark) FROM mark GROUP BY mark.student_id);
+
+-- Hiển thị tất cả các thông tin môn học (bảng subject) có credit lớn nhất.
+select * from subject where credit = (select max(credit) from subject);
+-- Hiển thị các thông tin môn học có điểm thi lớn nhất.
+select * from subject
+join mark on subject.id = mark.subject_id
+where mark.mark = (select max(mark) from mark);
+-- Hiển thị các thông tin sinh viên và điểm trung bình của mỗi sinh viên, xếp hạng theo thứ tự điểm giảm dần
+select student.*, avg (mark) as avarage_mark from student
+join mark on student.id = mark.student_id
+group by student.id
+order by avg(mark) desc;
