@@ -43,7 +43,7 @@ call product_all();
 delimiter //
 create procedure add_product()
 begin
-insert into products(id,product_code,product_name,product_price,product_amount,product_description,product_status) values(6,"a9","đường tam",1500,11,"tốt","vợ của tiểu vũ");
+insert into products(product_code,product_name,product_price,product_amount,product_description,product_status) values("a9","đường tam",1500,11,"tốt","vợ của tiểu vũ");
 end //
 delimiter ;
 call add_product();

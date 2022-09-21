@@ -1,11 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f34a88a7-3efe-4c22-a580-049d60804515" name="Default Changelist" comment="" />
+    <list default="true" id="f34a88a7-3efe-4c22-a580-049d60804515" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/css/ss1_css_intro/create_a_page_to_read_short_stories/create_a_page_to_read_short_stories.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/ss1_css_intro/create_a_page_to_read_short_stories/create_a_page_to_read_short_stories.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/ss1_css_intro/create_a_page_to_read_short_stories/demo1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/ss1_css_intro/create_a_page_to_read_short_stories/logo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/case_study/case_study_1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/case_study/case_study_1.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/ss5_using_view/exercise_1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/ss5_using_view/exercise_1.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -16,10 +50,25 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/css/ss1_css_intro" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CODEGYM\module3\css\ss1_css_intro" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -34,16 +83,38 @@
       <workItem from="1662708274453" duration="219000" />
       <workItem from="1662902165082" duration="44000" />
       <workItem from="1663063825841" duration="11000" />
+      <workItem from="1663724651296" duration="1623000" />
+      <workItem from="1663726461359" duration="1768000" />
+      <workItem from="1663728278016" duration="1770000" />
+      <workItem from="1663730098762" duration="761000" />
+      <workItem from="1663741729394" duration="1582000" />
+      <workItem from="1663743576853" duration="1770000" />
+      <workItem from="1663745395464" duration="1773000" />
+      <workItem from="1663747210933" duration="1771000" />
+      <workItem from="1663749025875" duration="1050000" />
+      <workItem from="1663752535623" duration="624000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="65" y="0" key="new project wizard" timestamp="1662708491137">
+    <state x="65" y="0" key="new project wizard" timestamp="1663724686801">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1662708491137" />
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1663724686801" />
   </component>
 </project>

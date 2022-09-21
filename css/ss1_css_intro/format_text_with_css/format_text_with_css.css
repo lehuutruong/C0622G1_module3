@@ -1,0 +1,17 @@
+p{
+    text-align: justify;
+    text-indent: 25px;
+    font-family: Tahoma;
+    font-size: 100%;
+}
+h1{
+    font-family: Tahoma;
+    font-size: 150%;
+}
+.bach-khoa{
+    font-family: Tahoma;
+    font-size: 100%;
+}
+.box{
+    display: flex;
+}
