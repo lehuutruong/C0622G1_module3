@@ -20,13 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f34a88a7-3efe-4c22-a580-049d60804515" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/css/ss1_css_intro/create_a_page_to_read_short_stories/create_a_page_to_read_short_stories.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/ss1_css_intro/create_a_page_to_read_short_stories/create_a_page_to_read_short_stories.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/ss1_css_intro/create_a_page_to_read_short_stories/demo1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/ss1_css_intro/create_a_page_to_read_short_stories/logo.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/case_study/case_study_1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/case_study/case_study_1.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/ss5_using_view/exercise_1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/ss5_using_view/exercise_1.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/ss1_css_intro/create_a_page_to_read_short_stories/demo1.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +87,7 @@
       <workItem from="1663745395464" duration="1773000" />
       <workItem from="1663747210933" duration="1771000" />
       <workItem from="1663749025875" duration="1050000" />
-      <workItem from="1663752535623" duration="624000" />
+      <workItem from="1663752535623" duration="1572000" />
     </task>
     <servers />
   </component>
