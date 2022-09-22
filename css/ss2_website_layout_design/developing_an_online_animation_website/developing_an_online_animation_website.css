@@ -1,0 +1,155 @@
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-m-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-m-12 {
+    width: 100%;
+}
+* {
+    box-sizing: border-box;
+}
+#logo{
+    height: 30px;
+    width: 3%;
+}
+[class*="col-"] {
+    float: left;
+    padding: 5px;
+}
+.row::after {
+    clear: both;
+    display: block;
+    content: " ";
+}
+.header-title {
+    background:blue;
+    font-size: 20pt;
+    font-style: italic;
+    position: fixed;
+    top: 0px;
+    z-index: 2 ;
+    left: 0;
+    right: 0;
+    margin: 0 8px;
+}
+
+.header-title-cartoon {
+    background: red;
+    color: white;
+    border-radius: 10%;
+}
+
+.menu {
+    background: yellowgreen;
+    margin-top: 52px;
+    text-align: center;
+}
+
+.luot_xem {
+    color: red;
+    font-size: 16px;
+}
+
+.view-p {
+    color: red;
+    font-size: 18px;
+    margin-top: -22px;
+    font-weight: bold;
+}
+
+.view-pp {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer {
+    background: ghostwhite;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    clear: both;
+}
+
+.border-column {
+    border: 10px solid ghostwhite;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.menu ul {
+    margin: 0px;
+    padding-right: 60px;
+}
+
+.menu ul li {
+    list-style: none;
+    display: inline;
+}
+
+.active:hover {
+    color: orange;
+    font-weight: bold;
+}
+
+.active {
+    text-decoration: none;
+    height: 20px;
+    line-height: 20px;
+    padding: 0px 20px 0px 20px;
+    border-right: 1px solid black;
+    color: black;
+}
+
+@media only screen and (max-width: 768px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+    .header-title-cartoon {
+        background: pink;
+        color: white;
+        border-radius: 10%;
+    }
+
+}
