@@ -19,13 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f34a88a7-3efe-4c22-a580-049d60804515" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/module3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/module3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/ss2_website_layout_design/create_a_simplified_interface_of_the_facebook_hone_page/create_a_simplified_interface_of_the_facebook_hone_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/ss2_website_layout_design/create_a_simplified_interface_of_the_facebook_hone_page/create_a_simplified_interface_of_the_facebook_hone_page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/ss2_website_layout_design/create_a_simplified_interface_of_the_facebook_hone_page/create_a_simplified_interface_of_the_facebook_hone_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/css/ss2_website_layout_design/create_a_simplified_interface_of_the_facebook_hone_page/create_a_simplified_interface_of_the_facebook_hone_page.html" afterDir="false" />
-    </list>
+    <list default="true" id="f34a88a7-3efe-4c22-a580-049d60804515" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,11 +59,12 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\CODEGYM\module3\css\ss1_css_intro\demo_1" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\CODEGYM\module3\css\ss1_css_intro" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CODEGYM\module3\css\bootstrap\building_landing_page" />
+      <recent name="D:\CODEGYM\module3\css\ss1_css_intro\demo_1" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -106,7 +101,7 @@
       <workItem from="1663807630781" duration="17123000" />
       <workItem from="1663843988759" duration="6927000" />
       <workItem from="1663893990190" duration="15585000" />
-      <workItem from="1663932891338" duration="296000" />
+      <workItem from="1663932891338" duration="538000" />
     </task>
     <servers />
   </component>
