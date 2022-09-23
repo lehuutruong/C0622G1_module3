@@ -89,7 +89,7 @@
 }
 #your_name{
     position: relative;
-    top: 50px;
+    top:35px;
     left: 25px;
     color: blue;
     font-size: 30px;
@@ -97,7 +97,7 @@
 #how{
     position: absolute;
     left: 80px;
-    top: 125px;
+    top: 137px;
     font-size: 20px;
 }
 #your_fr{
@@ -117,7 +117,35 @@
     background: orange;
     height: 10%;
 }
-
+.truong{
+    background: lightgray;
+    height: 534px;
+    margin-top: 25px;
+}
+.center{
+    position: absolute;
+    background: white;
+    height: 294px;
+    left: 430px;
+    top: 120px;
+    width: 500px;
+    border-radius: 11px;
+    padding: 25px;
+    float: left;
+}
+ul li{
+    list-style: none;
+    font-size: 20px;
+    float: left;
+    width: 30%;
+}
+.truong111{
+    position: absolute;
+    left: 10px;
+    width: 530px;
+    margin-top: 10px;
+    margin-left: 0px;
+}
 .left {
     background: #0f6674;
 }

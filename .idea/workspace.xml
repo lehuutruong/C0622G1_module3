@@ -20,8 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f34a88a7-3efe-4c22-a580-049d60804515" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/css/ss2_website_layout_design/developing_an_online_animation_website/developing_an_online_animation_website.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/module3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/module3.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/ss2_website_layout_design/create_a_simplified_interface_of_the_facebook_hone_page/create_a_simplified_interface_of_the_facebook_hone_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/ss2_website_layout_design/create_a_simplified_interface_of_the_facebook_hone_page/create_a_simplified_interface_of_the_facebook_hone_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/ss2_website_layout_design/create_a_simplified_interface_of_the_facebook_hone_page/create_a_simplified_interface_of_the_facebook_hone_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/css/ss2_website_layout_design/create_a_simplified_interface_of_the_facebook_hone_page/create_a_simplified_interface_of_the_facebook_hone_page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +51,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
@@ -100,7 +104,9 @@
       <workItem from="1663763777389" duration="35000" />
       <workItem from="1663763839612" duration="2574000" />
       <workItem from="1663807630781" duration="17123000" />
-      <workItem from="1663843988759" duration="6627000" />
+      <workItem from="1663843988759" duration="6927000" />
+      <workItem from="1663893990190" duration="15585000" />
+      <workItem from="1663932891338" duration="296000" />
     </task>
     <servers />
   </component>
