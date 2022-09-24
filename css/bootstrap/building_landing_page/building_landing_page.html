@@ -3,126 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <title>building_landing_page</title>
-    <link rel="stylesheet" href="../../bootstrap-5.0.2-dist/css/bootstrap.css">
-    <script src="../../bootstrap-5.0.2-dist/js/bootstrap.js"></script>
     <link rel="stylesheet" href="building_landing_page.css">
 </head>
 <body>
-<div class="container-fluid px-0 ">
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="img/logo_micro.png" height="30px" width="150px"/></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Surface</a>
+<div class="main">
+    <header class="header">
+        <div class="grid">
+            <nav class="header__navbar">
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-item header__navbar-item--separate">Microsoft</li>
+                    <li class="header__navbar-item header__navbar-item--strong">Surface</li>
+                    <li class="header__navbar-item header__navbar-item--has-notify"><a href=""
+                                                                                       class="header__navbar-item-link">Computers</a>
+                        <div class="header__notify">
+                            <header class="header__notify-header">
+                                <h3>Computers list</h3>
+                            </header>
+                            <ul class="header__notify-list">
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <div class="header__notify-info"><span
+                                                class="header__notify-name">2-in-1 PCs</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <div class="header__notify-info"><span
+                                                class="header__notify-name">Laptops</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <div class="header__notify-info"><span
+                                                class="header__notify-name">Dual Screen</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <div class="header__notify-info"><span
+                                                class="header__notify-name">All-in-One</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <div class="header__notify-info"><span
+                                                class="header__notify-name">Need help deciding?</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Computers
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                    <li class="header__navbar-item header__navbar-item--has-notify"><a href=""
+                                                                                       class="header__navbar-item-link">Computers
+                        for
+                        Business</a>
+                        <div class="header__notify">
+                            <header class="header__notify-header">
+                                <h3>Computers list</h3>
+                            </header>
+                            <ul class="header__notify-list">
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <div class="header__notify-info"><span
+                                                class="header__notify-name">2-in-1 Tablets</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <div class="header__notify-info"><span
+                                                class="header__notify-name">Laptops</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <div class="header__notify-info"><span
+                                                class="header__notify-name">Small and Large Screens</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <div class="header__notify-info"><span
+                                                class="header__notify-name">Accessories</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <div class="header__notify-info"><span
+                                                class="header__notify-name">Need help deciding?</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarComputersForBusiness" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Computers for Business
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                    <li class="header__navbar-item header__navbar-item--has-notify"><a href=""
+                                                                                       class="header__navbar-item-link">Accessories</a>
+                        <div class="header__notify">
+                            <header class="header__notify-header">
+                                <h3>Accessories list</h3>
+                            </header>
+                            <ul class="header__notify-list">
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <div class="header__notify-info"><span
+                                                class="header__notify-name">Surface Headphone 2</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <div class="header__notify-info"><span
+                                                class="header__notify-name">Surface Earbuds</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <div class="header__notify-info"><span
+                                                class="header__notify-name">Surface Pro X</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <div class="header__notify-info"><span
+                                                class="header__notify-name">Surface laptop accessories</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <div class="header__notify-info"><span
+                                                class="header__notify-name">Surface book accessories</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarAccessories" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Accessories
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                    <li class="header__navbar-item header__navbar-item--has-notify"><a href=""
+                                                                                       class="header__navbar-item-link">Shop
+                        now</a>
+                        <div class="header__notify">
+                            <header class="header__notify-header">
+                                <h3>Computers list</h3>
+                            </header>
+                            <ul class="header__notify-list">
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <div class="header__notify-info"><span
+                                                class="header__notify-name">2-in-1 Tablets</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <div class="header__notify-info"><span
+                                                class="header__notify-name">Laptops</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <div class="header__notify-info"><span
+                                                class="header__notify-name">Small and Large Screens</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <div class="header__notify-info"><span
+                                                class="header__notify-name">Accessories</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <div class="header__notify-info"><span
+                                                class="header__notify-name">Need help deciding?</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarShopNow" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Shop now
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Support</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a style="font-size: 13px;margin-top: 6px; margin-left: 241px" class="nav-link dropdown-toggle" href="#" id="navbarAllMicrosoft" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            All Microsoft
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <img style="width: 21px;margin-top: 15px;margin-left: 15px" src="https://www.google.com/search?q=icon+k%C3%ADnh+l%C3%BAp&sxsrf=ALiCzsZvt7CLgdXSolBcbVfVzuZlDocRJQ:1663933132345&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi29KH66ar6AhVIx2EKHRATDz4Q_AUoAXoECAIQAw&biw=1366&bih=625&dpr=1#imgrc=GFtcF4yuUwqa6M" alt="">
-                    </li>
-                    <li class="nav-item">
-                        <img style="width: 21px;margin-top: 15px;margin-left: 15px" src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="">
-                    </li>
-                    <li class="nav-item">
-                        <img style="width: 21px;margin-top: 15px;margin-left: 15px" src="https://www.google.com/search?q=icon+shopping&oq=icon+sho&aqs=chrome.3.69i57j0i512j0i131i433i512j0i512l3j69i60l2.2984j0j9&sourceid=chrome&ie=UTF-8#imgrc=RPVeYq-2mfgt2M" alt="">
-                    </li>
+                    <li class="header__navbar-item">logo</li>
                 </ul>
-
-            </div>
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-item"><a href="" class="header__navbar-item-link">
+                        All Microsoft
+                        <a href="" class="header__navbar-icon-link"><i
+                                class="header__navbar-icon fa-solid fa-magnifying-glass"></i></a>
+                        <a href="" class="header__navbar-icon-link"><i
+                                class="header__navbar-icon fa-solid fa-cart-shopping"></i></a>
+                        <a href="" class="header__navbar-icon-link"><i class="header__navbar-icon fa-solid fa-user"></i></a>
+                    </a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
-    <div id="slider">
-        <div  id="carouselExampleControls" class="carousel slide" style="transition:opacity 0s .2s" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./img/anh_bia.jpg" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="./img/anh_bia.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="./img/anh_bia.jpg" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-        <div class="text-content">
-            <h1 class="text-heeding">
-                Laptops designed by Microsoft
-            </h1>
-            <div class="text-description">
-                Surface laptops and 2-in-1s with Windows 11 empower you to create at home, in the classroom, and on the go.
-            </div>
-        </div>
+    </header>
+    <div class="container">
+        <img src="https://cdn.mos.cms.futurecdn.net/3WcZUWAMGTpTqjkZhjof64.jpg" alt="">
     </div>
+    <footer class="footer">
+      <p>Design by Truong @ he he</p>
+    </footer>
 </div>
+<script src="https://kit.fontawesome.com/68540fcb59.js" crossorigin="anonymous"></script>
 </body>
 </html>
