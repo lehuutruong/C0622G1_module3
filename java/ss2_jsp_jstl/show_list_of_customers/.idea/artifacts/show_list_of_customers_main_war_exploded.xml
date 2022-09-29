@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="show_list_of_customers.main:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/show_list_of_customers_main_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="show_list_of_customers.main" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: javax.servlet:jstl:1.2" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="show_list_of_customers.main/web/Web Gradle : show_list_of_customers-1.0-SNAPSHOT.war" />
+    </root>
+  </artifact>
+</component>
