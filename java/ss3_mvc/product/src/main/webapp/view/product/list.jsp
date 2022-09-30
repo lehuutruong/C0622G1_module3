@@ -31,8 +31,8 @@
             <td>${product.name}</td>
             <td>${product.price}</td>
             <td>${product.productCompany}</td>
-            <td><a href="/customers?action=edit&id=${customer.getId()}">edit</a></td>
-            <td><a href="/customers?action=delete&id=${customer.getId()}">delete</a></td>
+            <td><a href="/product?action=edit&id=${product.getId()}">edit</a></td>
+            <td><a href="/product?action=delete&id=${product.getId()}">delete</a></td>
         </tr>
     </c:forEach>
 </table>
