@@ -27,7 +27,7 @@ public class ProductRepository implements IProductRepository {
     public Product findById(String id) {
         for (Product item : productList
         ) {
-            if (item.equals(id)) {
+            if (item.getId().equals(id)) {
                 return item;
             }
         }
