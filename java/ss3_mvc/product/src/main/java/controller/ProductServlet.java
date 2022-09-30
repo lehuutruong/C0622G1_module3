@@ -69,7 +69,7 @@ public class ProductServlet extends HttpServlet {
 
             this.productService.update(id, product);
             request.setAttribute("product", product);
-            request.setAttribute("message", "Thông tin sản phẩm được cập nhật thành công!");
+            request.setAttribute("message", "updated!");
             dispatcher = request.getRequestDispatcher("view/product/edit.jsp");
         }
         try {
@@ -88,7 +88,7 @@ public class ProductServlet extends HttpServlet {
         String productCompany = request.getParameter("productCompany");
         Product product = new Product(id, name, price, productCompany);
         productService.add(product);
-        request.setAttribute("mess", "Them moi Thanh Cong");
+        request.setAttribute("mess", "list add complete");
         showProduct(request, response);
 
     }
