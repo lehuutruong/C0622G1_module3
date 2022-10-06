@@ -12,6 +12,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <style>
+
         :root {
             --white-color: #fff;
             --black-color: #000;
@@ -19,7 +20,7 @@
         }
 
         * {
-            box-sizing: inherit;
+            box-sizing: border-box;
         }
 
         html {
@@ -35,29 +36,29 @@
             margin: 0 auto;
         }
 
-        .grid__full-width {
-            width: 100%;
-        }
-
-        .grid__row {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
         .header {
             height: 90px;
+            display: flex;
+            align-items: center;
             background-color: #8F8318;
         }
 
         .header__navbar {
             display: flex;
             justify-content: space-between;
+            align-items: center;
         }
 
         .header__navbar-list {
+            display: flex;
+            align-items: center;
             list-style: none;
-            padding-left: 0;
-            margin-top: 8px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .header__navbar-list form {
+            margin: 0;
         }
 
         .header__navbar-item {
@@ -71,19 +72,12 @@
         }
 
         .header__navbar-item, .header__navbar-item-link {
-            display: inline-block;
             font-size: 2rem;
             color: var(--white-color);
             text-decoration: none;
             font-weight: 300;
         }
 
-        /*.d-flex,.form-control me-2{*/
-        /*    font-size: 5rem;*/
-        /*    color: var(--white-color);*/
-        /*    text-decoration: none;*/
-        /*    font-weight: 300;*/
-        /*}*/
         .header__navbar-item, .header__navbar-item-link, .header__navbar-icon {
             display: inline-flex;
             align-items: center;
@@ -92,18 +86,6 @@
         .header__navbar-item--strong {
             font-weight: 400;
         }
-
-        /*.header__navbar-item--separate::after {*/
-        /*    content: "";*/
-        /*    display: block;*/
-        /*    position: absolute;*/
-        /*    width: 2px;*/
-        /*    height: 20px;*/
-        /*    background-color: black;*/
-        /*    right: -9px;*/
-        /*    top: 50%;*/
-        /*    transform: translateY(-50%);*/
-        /*}*/
 
         .header__navbar-item:hover,
         .header__navbar-item-link:hover {
@@ -152,7 +134,7 @@
             color: #888;
             margin: 0 0 0 12px;
             width: 200px;
-            font-size: 1.4rem;
+            font-size: 2rem;
             line-height: 40px;
         }
 
@@ -175,8 +157,10 @@
 
         .header__notify-name {
             display: block;
-            font-size: 1.4rem;
+            font-size: 1.7rem;
             color: black;
+            text-decoration: blink;
+
         }
 
         .content {
@@ -196,321 +180,199 @@
             top: 750px;
             left: 500px;
         }
-
-        /*.video-btn {*/
-        /*    position: relative;*/
-        /*    cursor: pointer; }*/
-        /*.video-btn:after {*/
-        /*    position: absolute;*/
-        /*    top: 50%;*/
-        /*    left: 50%;*/
-        /*    z-index: 1;*/
-        /*    display: block;*/
-        /*    margin: -4px 0 0 -40px;*/
-        /*    color: #fff;*/
-        /*    content: '\e91c';*/
-        /*    font-size: 80px;*/
-        /*    font-family: 'hotelfont';*/
-        /*    line-height: 1em;*/
-        /*    -webkit-transform: scale(1);*/
-        /*    transform: scale(1);*/
-        /*    pointer-events: none;*/
-        /*    -webkit-transform: translateZ(0) scale(1, 1);*/
-        /*    -webkit-backface-visibility: hidden;*/
-        /*    -webkit-transition: 0.25s;*/
-        /*    transition: 0.25s; }*/
     </style>
 </head>
 <body>
-<div class="container-fluid">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <nav class="navbar navbar-expand-lg navbar-light bg-white">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#" style="font-size: 15px"> Thời tiết: 31 °C / 88 °F</a><i
-                            class="fa-solid fa-sun-cloud"
-                            style="background-color: black;font-size: 20px;color: black"> </i>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarText"
-                                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <a class="navbar-brand" href="#" style="font-size: 15px">Giờ địa phương: 03:23 pm</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarText"
-                                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <span class="navbar-text" style="word-spacing: 25px;font-size: 17px">
-                 EN VI JA KR RU CN
-                </span>
 
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container row">
-    <div class="col-lg-12" style="background-color: gray;width: 100%;height: 5px;padding-left: 0px"></div>
-</div>
-<div class="container-fluid">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <nav class="navbar navbar-expand-lg navbar-light bg-white">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#"><img style="height: 100px;width: 110px"
-                                                              src="furamaLogo.jpg"></a>
-                        <%--                        <a class="navbar-brand" href="#" style="font-size: 15px"><img style="height: 100px;width: 100px" src="tripa.jpg"></a>--%>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-lg-12">
-        <header class="header">
-            <div class="grid">
-                <nav class="header__navbar">
-                    <ul class="header__navbar-list">
-                        <li class="header__navbar-item header__navbar-item--separate"><img src="furamaLogo.jpg"
-                                                                                           style="height: 70px;width: 70px">
-                        </li>
-                        <li class="header__navbar-item header__navbar-item--has-notify"><a href=""
-                                                                                           class="header__navbar-item-link">Employee</a>
-                            <div class="header__notify">
-                                <header class="header__notify-header">
-                                    <h3>Computers list</h3>
-                                </header>
-                                <ul class="header__notify-list">
-                                    <li class="header__notify-item">
-                                        <a href="" class="header__notify-link">
-                                            <div class="header__notify-info"><span
-                                                    class="header__notify-name">Employee List</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="header__notify-item">
-                                        <a href="" class="header__notify-link">
-                                            <div class="header__notify-info"><span
-                                                    class="header__notify-name">Add Employee</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="header__notify-item">
-                                        <a href="" class="header__notify-link">
-                                            <div class="header__notify-info"><span
-                                                    class="header__notify-name">Edit Employee</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="header__notify-item">
-                                        <a href="" class="header__notify-link">
-                                            <div class="header__notify-info"><span
-                                                    class="header__notify-name">Delete Employee</span>
-                                            </div>
-                                        </a>
-                                    </li>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <header class="header">
+                <div class="grid">
+                    <nav class="header__navbar">
+                        <ul class="header__navbar-list">
+                            <li class="header__navbar-item header__navbar-item--separate"><img src="img/furamaLogo.jpg"
+                                                                                               style="height: 70px;width: 70px">
+                            </li>
+                            <li class="header__navbar-item header__navbar-item--has-notify"><a href=""
+                                                                                               class="header__navbar-item-link">Employee</a>
+                                <div class="header__notify">
+                                    <header class="header__notify-header">
+                                        <h3>Computers list</h3>
+                                    </header>
+                                    <ul class="header__notify-list">
+                                        <li class="header__notify-item">
+                                            <a href="/employee?action=" class="header__notify-link">
+                                                <div class="header__notify-info"><span
+                                                        class="header__notify-name">Employee List</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="header__notify-item">
+                                            <a href="/employee?action=add" class="header__notify-link">
+                                                <div class="header__notify-info"><span
+                                                        class="header__notify-name">Add Employee</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="header__notify-item">
+                                            <a href="/employee?action=edit" class="header__notify-link">
+                                                <div class="header__notify-info"><span
+                                                        class="header__notify-name">Edit Employee</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="header__notify-item">
+                                            <a href="" class="header__notify-link">
+                                                <div class="header__notify-info"><span
+                                                        class="header__notify-name">Delete Employee</span>
+                                                </div>
+                                            </a>
+                                        </li>
 
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="header__navbar-item header__navbar-item--has-notify"><a href=""
-                                                                                           class="header__navbar-item-link">
-                            Customer</a>
-                            <div class="header__notify">
-                                <header class="header__notify-header">
-                                    <h3>Computers list</h3>
-                                </header>
-                                <ul class="header__notify-list">
-                                    <li class="header__notify-item">
-                                        <a href="" class="header__notify-link">
-                                            <div class="header__notify-info"><span
-                                                    class="header__notify-name">Customer List</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="header__notify-item">
-                                        <a href="" class="header__notify-link">
-                                            <div class="header__notify-info"><span
-                                                    class="header__notify-name">Add Customer</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="header__notify-item">
-                                        <a href="" class="header__notify-link">
-                                            <div class="header__notify-info"><span
-                                                    class="header__notify-name">Edit Customer</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="header__notify-item">
-                                        <a href="" class="header__notify-link">
-                                            <div class="header__notify-info"><span
-                                                    class="header__notify-name">Delete Customer</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="header__navbar-item header__navbar-item--has-notify"><a href=""
-                                                                                           class="header__navbar-item-link">Service</a>
-                            <div class="header__notify">
-                                <header class="header__notify-header">
-                                    <h3>Accessories list</h3>
-                                </header>
-                                <ul class="header__notify-list">
-                                    <li class="header__notify-item">
-                                        <a href="" class="header__notify-link">
-                                            <div class="header__notify-info"><span
-                                                    class="header__notify-name">Surface Headphone 2</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="header__notify-item">
-                                        <a href="" class="header__notify-link">
-                                            <div class="header__notify-info"><span
-                                                    class="header__notify-name">Surface Earbuds</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="header__notify-item">
-                                        <a href="" class="header__notify-link">
-                                            <div class="header__notify-info"><span
-                                                    class="header__notify-name">Surface Pro X</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="header__notify-item">
-                                        <a href="" class="header__notify-link">
-                                            <div class="header__notify-info"><span
-                                                    class="header__notify-name">Surface laptop accessories</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="header__notify-item">
-                                        <a href="" class="header__notify-link">
-                                            <div class="header__notify-info"><span
-                                                    class="header__notify-name">Surface book accessories</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="header__navbar-item header__navbar-item--has-notify"><a href=""
-                                                                                           class="header__navbar-item-link">
-                            Contract</a>
-                            <div class="header__notify">
-                                <header class="header__notify-header">
-                                    <h3>Computers list</h3>
-                                </header>
-                                <ul class="header__notify-list">
-                                    <li class="header__notify-item">
-                                        <a href="" class="header__notify-link">
-                                            <div class="header__notify-info"><span
-                                                    class="header__notify-name">2-in-1 Tablets</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="header__notify-item">
-                                        <a href="" class="header__notify-link">
-                                            <div class="header__notify-info"><span
-                                                    class="header__notify-name">Laptops</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="header__notify-item">
-                                        <a href="" class="header__notify-link">
-                                            <div class="header__notify-info"><span
-                                                    class="header__notify-name">Small and Large Screens</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="header__notify-item">
-                                        <a href="" class="header__notify-link">
-                                            <div class="header__notify-info"><span
-                                                    class="header__notify-name">Accessories</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="header__notify-item">
-                                        <a href="" class="header__notify-link">
-                                            <div class="header__notify-info"><span
-                                                    class="header__notify-name">Need help deciding?</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul class="header__navbar-list">
-                        <li>
-                            <form class="d-flex">
-                                <input style="width: 200px;height: 40px" class="form-control me-2" type="search"
-                                       placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-primary"
-                                        style="color: white;background-color: blueviolet;width: 70px"
-                                        type="submit">Search
-                                </button>
-                            </form>
-                        </li>
-                    </ul>
-                </nav>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="header__navbar-item header__navbar-item--has-notify"><a href=""
+                                                                                               class="header__navbar-item-link">
+                                Customer</a>
+                                <div class="header__notify">
+                                    <header class="header__notify-header">
+                                        <h3>Computers list</h3>
+                                    </header>
+                                    <ul class="header__notify-list">
+                                        <li class="header__notify-item">
+                                            <a href="" class="header__notify-link">
+                                                <div class="header__notify-info"><span
+                                                        class="header__notify-name">Customer List</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="header__notify-item">
+                                            <a href="" class="header__notify-link">
+                                                <div class="header__notify-info"><span
+                                                        class="header__notify-name">Add Customer</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="header__notify-item">
+                                            <a href="" class="header__notify-link">
+                                                <div class="header__notify-info"><span
+                                                        class="header__notify-name">Edit Customer</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="header__notify-item">
+                                            <a href="" class="header__notify-link">
+                                                <div class="header__notify-info"><span
+                                                        class="header__notify-name">Delete Customer</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="header__navbar-item header__navbar-item--has-notify"><a href=""
+                                                                                               class="header__navbar-item-link">Service</a>
+                                <div class="header__notify">
+                                    <header class="header__notify-header">
+                                        <h3>Accessories list</h3>
+                                    </header>
+                                    <ul class="header__notify-list">
+                                        <li class="header__notify-item">
+                                            <a href="" class="header__notify-link">
+                                                <div class="header__notify-info"><span
+                                                        class="header__notify-name">Villa</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="header__notify-item">
+                                            <a href="" class="header__notify-link">
+                                                <div class="header__notify-info"><span
+                                                        class="header__notify-name">House</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="header__notify-item">
+                                            <a href="" class="header__notify-link">
+                                                <div class="header__notify-info"><span
+                                                        class="header__notify-name">Room</span>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="header__navbar-item header__navbar-item--has-notify"><a href=""
+                                                                                               class="header__navbar-item-link">
+                                Contract</a>
+
+                            </li>
+                        </ul>
+                        <ul class="header__navbar-list" style="margin-right: 25px">
+                            <li>
+                                <form class="d-flex">
+                                    <input style="width: 200px;height: 40px" class="form-control me-2" type="search"
+                                           placeholder="Search" aria-label="Search">
+                                    <button class="btn btn-outline-primary"
+                                            style="color: white;background-color: blueviolet;width: 70px"
+                                            type="submit">Search
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <img src="img/yeah.jpeg" style="width: 100%;display: block">
+        </div>
+    </div>
+    <div class="row" style=" margin-top: 100px; ">
+        <div class="col-lg-6">
+            <div class="row">
+                <h3 style="font-size: 27px;color: red;word-break: normal">KHU NGHỈ DƯỠNG ĐẲNG CẤP THẾ GIỚI FURAMA ĐÀ
+                    NẴNG,
+                    TỰ HÀO LÀ KHU NGHỈ
+                    DƯỠNG ẨM THỰC TẠI VIỆT NAM</h3>
             </div>
-        </header>
-    </div>
-</div>
-<div class="row">
-    <div class="col-lg-12">
-        <img src="yeah.jpeg">
-    </div>
-</div>
-<div class="row">
-    <div class="col-lg-12" style="height: 140px;background-color: white"></div>
-</div>
-<div class="row container">
-    <div class="col-lg-6">
-        <div class="row">
-            <h3 style="font-size: 27px;color: red;word-break: normal">KHU NGHỈ DƯỠNG ĐẲNG CẤP THẾ GIỚI FURAMA ĐÀ NẴNG,
-                TỰ HÀO LÀ KHU NGHỈ
-                DƯỠNG ẨM THỰC TẠI VIỆT NAM</h3>
+            <div class="row" style="height: 16px;background-color: white">
+            </div>
+            <div class="row" style="color: black;font-size: 16px;word-break: normal">
+                <p>Hướng ra bãi biển Đà Nẵng trải dài cát trắng, Furama Resort Đà Nẵng là cửa ngõ đến với 3 di sản văn
+                    hoá
+                    thế giới: Hội An (20 phút), Mỹ Sơn (90 phút) và Huế (2 tiếng. 196 phòng hạng sang cùng với 70 căn
+                    biệt
+                    thự từ hai đến bốn phòng ngủ có hồ bơi riêng đều được trang trí trang nhã, theo phong cách thiết kế
+                    truyền thống của Việt Nam và kiến trúc thuộc địa của Pháp, biến Furama thành khu nghỉ dưỡng danh giá
+                    nhất tại Việt Nam – vinh dự được đón tiếp nhiều người nổi tiếng, giới hoàng gia, chính khách, ngôi
+                    sao
+                    điện ảnh và các nhà lãnh đạo kinh doanh quốc tế.</p>
+            </div>
+            <div class="row" style="height: 16px;background-color: white">
+            </div>
+            <div class="row">
+                <img src="img/06-2%20(1).jpg">
+            </div>
+            <div class="row" style="height: 16px;background-color: white">
+            </div>
+            <div class="row">
+                <img src="img/DES-PHONGNHA-1.jpg">
+            </div>
         </div>
-        <div class="row" style="height: 16px;background-color: white">
-        </div>
-        <div class="row" style="color: black;font-size: 16px;word-break: normal">
-            <p>Hướng ra bãi biển Đà Nẵng trải dài cát trắng, Furama Resort Đà Nẵng là cửa ngõ đến với 3 di sản văn hoá
-                thế giới: Hội An (20 phút), Mỹ Sơn (90 phút) và Huế (2 tiếng. 196 phòng hạng sang cùng với 70 căn biệt
-                thự từ hai đến bốn phòng ngủ có hồ bơi riêng đều được trang trí trang nhã, theo phong cách thiết kế
-                truyền thống của Việt Nam và kiến trúc thuộc địa của Pháp, biến Furama thành khu nghỉ dưỡng danh giá
-                nhất tại Việt Nam – vinh dự được đón tiếp nhiều người nổi tiếng, giới hoàng gia, chính khách, ngôi sao
-                điện ảnh và các nhà lãnh đạo kinh doanh quốc tế.</p>
-        </div>
-        <div class="row" style="height: 16px;background-color: white">
-        </div>
-        <div class="row">
-            <img src="06-2%20(1).jpg">
-        </div>
-        <div class="row" style="height: 16px;background-color: white">
-        </div>
-        <div class="row">
-            <img src="DES-PHONGNHA-1.jpg">
-        </div>
-    </div>
-    <div class="col-lg-6">
-        <div class="row">
-            <a href="https://www.youtube.com/watch?v=VzDrgGaXBjY" class="video-btn js-video-btn" >
-                <img src="furama-đà-nẵng.jpg">
-            </a>
-        </div>
-        <div class="row" style="height: 16px;background-color: white">
-            <div class="row"style="color: black;font-size: 16px;word-break: normal">
-                <p > Ẩm thực tại khu nghỉ dưỡng là trải nghiệm kết hợp giữa các món ăn Việt Nam, châu Á, Ý và châu Âu
+        <div class="col-lg-6">
+            <div class="row">
+                <a href="https://www.youtube.com/watch?v=VzDrgGaXBjY" class="video-btn js-video-btn">
+                    <img src="img/furama-đà-nẵng.jpg" style="width: 100%; display: block">
+                </a>
+            </div>
+            <div class="row" style="height: 16px;background-color: white"></div>
+            <div class="row" style="color: black;font-size: 16px;word-break: normal">
+                <p> Ẩm thực tại khu nghỉ dưỡng là trải nghiệm kết hợp giữa các món ăn Việt Nam, châu Á, Ý và châu Âu
                     cùng các món bít tết nhập khẩu hảo hạng. Khu nghỉ dưỡng mang đến cho quý khách những không gian ẩm
                     thực đa dạng bao gồm – quầy bar nhìn ra biển, hồ bơi Lagoon được bao quanh bởi khu vườn nhiệt đới,
                     ẩm thực truyền thống Ý tại nhà hàng Don Cipriani’s, chất Á Đông tại Café Indochine hay nhà hàng bít
@@ -520,7 +382,7 @@
                     đẹp.</p>
             </div>
             <div class="row" style="height: 16px;background-color: white">
-                <div class="row"style="color: black;font-size: 16px;word-break: normal">
+                <div class="row" style="color: black;font-size: 16px;word-break: normal">
                     <p> Nằm tại vị trí đắc địa gần trung tâm Đà Nẵng và là nơi kết nối quốc tế thuận tiện đến Singapore,
                         Bangkok, Xiêm Riệp, Kuala Lumpur, Đài Loan, Tokyo, Osaka, Busan, Seoul, Tokyo, Osaka và Hồng
                         Kông –
@@ -535,20 +397,19 @@
                         MICE
                         lớn nhất Việt Nam có sức chứa lên tới 5,000 khách.</p>
                 </div>
-                <div class="row" style="height: 16px;background-color: white">
-                    <div class="row"style="color: black;font-size: 16px;word-break: normal">
-                        <p> Một loạt các bữa tiệc theo chủ đề trên bãi biển hoặc xung quanh hồ Lagoon, trong phòng đại
-                            tiệc hoặc bên ngoài khu nghỉ dưỡng, kết hợp các dịch vụ đặc biệt như VIP xuất hiện từ trực
-                            thăng đáp xuống bãi đáp riêng của khu nghỉ dưỡng; Thêm vào đó là các hoạt động nhóm và thể
-                            thao trên nước, “Trung tâm lặn” đạt tiêu chuẩn lặn biển quốc tế, 2 sân golf 18 lỗ, cũng như
-                            các dịch vụ chăm sóc sức khoẻ và sắc đẹp đã khiến Furama Đà Nẵng trở thành địa điểm lý tưởng
-                            cho các nhóm MICE.</p>
-                    </div>
+                <div class="row" style="height: 10px;background-color: white"></div>
+                <div class="row" style="color: black;font-size: 16px;word-break: normal">
+                    <p> Một loạt các bữa tiệc theo chủ đề trên bãi biển hoặc xung quanh hồ Lagoon, trong phòng đại
+                        tiệc hoặc bên ngoài khu nghỉ dưỡng, kết hợp các dịch vụ đặc biệt như VIP xuất hiện từ trực
+                        thăng đáp xuống bãi đáp riêng của khu nghỉ dưỡng;
+                    </p>
                 </div>
             </div>
         </div>
-        <script src="../bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
-        <script src="https://kit.fontawesome.com/68540fcb59.js" crossorigin="anonymous"></script>
+    </div>
+</div>
+<script src="../bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/68540fcb59.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
