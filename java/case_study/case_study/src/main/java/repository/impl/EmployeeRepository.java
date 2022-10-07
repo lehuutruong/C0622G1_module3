@@ -14,7 +14,7 @@ public class EmployeeRepository implements IEmployeeRepository {
     private String jdbcPassword = "truongkhangasdf";
 
     private static final String INSERT_EMPLOYEE_SQL = "insert into employee (name,date_of_birth,id_card,salary,phone_number,email,address,position_id,education_degree_id,division_id,username) values(?,?,?,?,?,?,?,?,?,?,?);";
-    private static final String SELECT_EMPLOYEE_BY_ID = "select name,date_of_birth,id_card,salary,phone_number,email,address,position_id,education_degree_id,division_id,username from employee where id =?";
+    private static final String SELECT_EMPLOYEE_BY_ID = "select * from employee where id = ?;";
     //    private static final String SELECT_USER_BY_COUNTRY = "select * from users where country like ?";
     private static final String SELECT_ALL_EMPLOYEE = "select * from employee;";
         private static final String DELETE_EMPLOYEE_SQL = "delete from employee where id = ?;";
@@ -51,7 +51,7 @@ public class EmployeeRepository implements IEmployeeRepository {
                 String name = rs.getString("name");
                 String dateOfBirth = rs.getString("date_of_birth");
                 String idCard = rs.getString("id_card");
-                Double salary = rs.getDouble("salary");
+                double salary = rs.getDouble("salary");
                 String phoneNumber = rs.getString("phone_number");
                 String email = rs.getString("email");
                 String address = rs.getString("address");
@@ -102,13 +102,15 @@ public class EmployeeRepository implements IEmployeeRepository {
             statement.setString(1, employee.getName());
             statement.setString(2, employee.getDateOfBirth());
             statement.setString(3, employee.getIdCard());
-            statement.setDouble(5, employee.getSalary());
-            statement.setString(6, employee.getPhoneNumber());
-            statement.setString(7, employee.getEmail());
+            statement.setDouble(4, employee.getSalary());
+            statement.setString(5, employee.getPhoneNumber());
+            statement.setString(6, employee.getEmail());
+            statement.setString(7, employee.getAddress());
             statement.setInt(8, employee.getPositionId());
             statement.setInt(9, employee.getEducationDegreeId());
             statement.setInt(10, employee.getDivisionId());
             statement.setString(11, employee.getUserName());
+            statement.setInt(12, employee.getId());
             rowUpdated = statement.executeUpdate() > 0;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -119,22 +121,13 @@ public class EmployeeRepository implements IEmployeeRepository {
 
     @Override
     public Employee selectEmployee(int id) {
-        Employee employee = null;
-        Connection connection = getConnection();
-        PreparedStatement preparedStatement = null;
+        Employee employee=null;
+        Connection connection=getConnection();
         try {
-            preparedStatement = connection.prepareStatement(SELECT_EMPLOYEE_BY_ID);
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-        try {
-            preparedStatement.setInt(1, id);
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-        try {
-            ResultSet rs = preparedStatement.executeQuery();
-            while (rs.next()) {
+            PreparedStatement preparedStatement=connection.prepareStatement(SELECT_EMPLOYEE_BY_ID);
+            preparedStatement.setInt(1,id);
+            ResultSet rs=preparedStatement.executeQuery();
+            while (rs.next()){
                 String name = rs.getString("name");
                 String dateOfBirth = rs.getString("date_of_birth");
                 String idCard = rs.getString("id_card");
@@ -146,11 +139,14 @@ public class EmployeeRepository implements IEmployeeRepository {
                 int educationDegreeId = rs.getInt("education_degree_id");
                 int divisionId = rs.getInt("division_id");
                 String userName = rs.getString("username");
-                employee = new Employee(name, dateOfBirth, idCard, salary, phoneNumber, email, address, positionId, educationDegreeId, divisionId, userName);
+                employee=new Employee(name,dateOfBirth,idCard,salary,phoneNumber,email,address,positionId,educationDegreeId,divisionId,userName);
+
             }
+
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+
         return employee;
     }
 
@@ -163,6 +159,19 @@ public class EmployeeRepository implements IEmployeeRepository {
         rowDeleted = statement.executeUpdate() > 0;
 
         return rowDeleted;
+    }
+
+    @Override
+    public void deleteEmployeeList(int id) {
+        Connection connection=getConnection();
+        try {
+            PreparedStatement preparedStatement=connection.prepareStatement(DELETE_EMPLOYEE_SQL);
+            preparedStatement.setInt(1,id);
+            preparedStatement.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
     }
 
 }

@@ -11,4 +11,5 @@ public interface IEmployeeRepository {
     boolean updateEmployee(Employee employee);
     Employee selectEmployee(int id);
     boolean deleteEmployee(int id) throws SQLException;
+    void deleteEmployeeList(int id);
 }

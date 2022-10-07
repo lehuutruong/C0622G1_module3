@@ -40,7 +40,7 @@
             <tr>
                 <th>Employee dateOfBirth:</th>
                 <td>
-                    <input type="text" name="email" size="45"
+                    <input type="text" name="dateOfBirth" size="45"
                            value="<c:out value='${employeeList.dateOfBirth}' />"
                     />
                 </td>
@@ -48,7 +48,7 @@
             <tr>
                 <th>idCard:</th>
                 <td>
-                    <input type="text" name="country" size="15"
+                    <input type="text" name="idCard" size="15"
                            value="<c:out value='${employeeList.idCard}' />"
                     />
                 </td>
@@ -56,7 +56,7 @@
             <tr>
                 <th>salary:</th>
                 <td>
-                    <input type="text" name="country" size="15"
+                    <input type="text" name="salary" size="15"
                            value="<c:out value='${employeeList.salary}' />"
                     />
                 </td>
@@ -64,7 +64,7 @@
             <tr>
                 <th>phoneNumber:</th>
                 <td>
-                    <input type="text" name="country" size="15"
+                    <input type="text" name="phoneNumber" size="15"
                            value="<c:out value='${employeeList.phoneNumber}' />"
                     />
                 </td>
@@ -72,7 +72,7 @@
             <tr>
                 <th>email:</th>
                 <td>
-                    <input type="text" name="country" size="15"
+                    <input type="text" name="email" size="15"
                            value="<c:out value='${employeeList.email}' />"
                     />
                 </td>
@@ -80,7 +80,7 @@
             <tr>
                 <th>address:</th>
                 <td>
-                    <input type="text" name="country" size="15"
+                    <input type="text" name="address" size="15"
                            value="<c:out value='${employeeList.address}' />"
                     />
                 </td>
@@ -88,7 +88,7 @@
             <tr>
                 <th>positionId:</th>
                 <td>
-                    <input type="text" name="country" size="15"
+                    <input type="text" name="positionId" size="15"
                            value="<c:out value='${employeeList.positionId}' />"
                     />
                 </td>
@@ -96,7 +96,7 @@
             <tr>
                 <th>educationDegreeId:</th>
                 <td>
-                    <input type="text" name="country" size="15"
+                    <input type="text" name="educationDegreeId" size="15"
                            value="<c:out value='${employeeList.educationDegreeId}' />"
                     />
                 </td>
@@ -104,7 +104,7 @@
             <tr>
                 <th>divisionId:</th>
                 <td>
-                    <input type="text" name="country" size="15"
+                    <input type="text" name="divisionId" size="15"
                            value="<c:out value='${employeeList.divisionId}' />"
                     />
                 </td>
@@ -112,7 +112,7 @@
             <tr>
                 <th>userName:</th>
                 <td>
-                    <input type="text" name="country" size="15"
+                    <input type="text" name="userName" size="15"
                            value="<c:out value='${employeeList.userName}' />"
                     />
                 </td>

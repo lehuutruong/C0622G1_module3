@@ -2,12 +2,12 @@ package model;
 
 import java.util.Date;
 
-public class Employee {
+public class  Employee {
     private int id;
     private String name;
     private String dateOfBirth;
     private String idCard;
-    private Double salary;
+    private double salary;
     private String phoneNumber;
     private String email;
     private String address;
@@ -19,7 +19,7 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(String name, String dateOfBirth, String idCard, Double salary, String phoneNumber, String email, String address, int positionId, int educationDegreeId, int divisionId, String userName) {
+    public Employee(String name, String dateOfBirth, String idCard, double salary, String phoneNumber, String email, String address, int positionId, int educationDegreeId, int divisionId, String userName) {
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.idCard = idCard;
@@ -33,7 +33,7 @@ public class Employee {
         this.userName = userName;
     }
 
-    public Employee(int id, String name, String dateOfBirth, String idCard, Double salary, String phoneNumber, String email, String address, int positionId, int educationDegreeId, int divisionId, String userName) {
+    public Employee(int id, String name, String dateOfBirth, String idCard, double salary, String phoneNumber, String email, String address, int positionId, int educationDegreeId, int divisionId, String userName) {
         this.id = id;
         this.name = name;
         this.dateOfBirth = dateOfBirth;
@@ -80,11 +80,11 @@ public class Employee {
         this.idCard = idCard;
     }
 
-    public Double getSalary() {
+    public double getSalary() {
         return salary;
     }
 
-    public void setSalary(Double salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 

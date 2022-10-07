@@ -33,4 +33,9 @@ public class EmployeeService  implements IEmployeeService {
     public boolean deleteEmployee(int id) throws SQLException {
         return employeeRepository.deleteEmployee(id);
     }
+
+    @Override
+    public void deleteEmployeeList(int id) {
+        employeeRepository.deleteEmployeeList(id);
+    }
 }
