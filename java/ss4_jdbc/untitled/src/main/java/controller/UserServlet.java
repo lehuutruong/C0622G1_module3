@@ -34,24 +34,10 @@ public class UserServlet extends HttpServlet {
                     updateUser(request, response);
                     break;
                 case "search":
-                    searchByCountry(request, response);
                     break;
                             }
         } catch (SQLException ex) {
             throw new ServletException(ex);
-        }
-    }
-
-       private void searchByCountry(HttpServletRequest request, HttpServletResponse response) {
-        String country = request.getParameter("country");
-        List<User> list = userService.findByCountry(country);
-        request.setAttribute("listUser",list);
-        try {
-            request.getRequestDispatcher("/view/user/list.jsp").forward(request,response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 
@@ -73,9 +59,6 @@ public class UserServlet extends HttpServlet {
                 case "delete":
                     deleteUser(request, response);
                     break;
-                case "sort":
-                    sortByName(request, response);
-                    break;
                 default:
                     listUser(request, response);
                     break;
@@ -84,22 +67,10 @@ public class UserServlet extends HttpServlet {
             throw new ServletException(ex);
         }
     }
-    private void sortByName(HttpServletRequest request, HttpServletResponse response) {
-        List<User> list = userService.sortByName();
-        request.setAttribute("listUser",list);
-        try {
-            request.getRequestDispatcher("/view/user/list.jsp").forward(request,response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
-    }
     private void listUser(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
-//        List<User> listUser = userService.selectAllUsers();
-        List<User> listUser = userService.selectAllUsersNo2();
+        List<User> listUser = userService.selectAllUsers();
         request.setAttribute("listUser", listUser);
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/user/list.jsp");
         dispatcher.forward(request, response);
@@ -114,8 +85,7 @@ public class UserServlet extends HttpServlet {
     private void showEditForm(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-//        User existingUser = userService.selectUser(id);
-        User existingUser = userService.getUserById(id);
+        User existingUser = userService.selectUser(id);
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/user/edit.jsp");
         request.setAttribute("user", existingUser);
         dispatcher.forward(request, response);
@@ -128,8 +98,7 @@ public class UserServlet extends HttpServlet {
         String email = request.getParameter("email");
         String country = request.getParameter("country");
         User newUser = new User(name, email, country);
-//        userService.insertUser(newUser);
-        userService.insertUserStore(newUser);
+        userService.insertUser(newUser);
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/user/create.jsp");
         dispatcher.forward(request, response);
     }
@@ -142,8 +111,7 @@ public class UserServlet extends HttpServlet {
         String country = request.getParameter("country");
 
         User book = new User(id, name, email, country);
-//        userService.updateUser(book);
-        userService.updateUserNo2(book);
+        userService.updateUser(book);
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/user/edit.jsp");
         dispatcher.forward(request, response);
     }
@@ -151,8 +119,7 @@ public class UserServlet extends HttpServlet {
     private void deleteUser(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
         int id = Integer.parseInt(request.getParameter("id"));
-//        userService.deleteUser(id);
-        userService.deleteUserNo2(id);
+        userService.deleteUser(id);
 
         List<User> listUser = userService.selectAllUsers();
         request.setAttribute("listUser", listUser);

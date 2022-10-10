@@ -9,6 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
+
 <html>
 <head>
     <title>Employee List</title>
@@ -16,6 +17,26 @@
 </head>
 <body>
 <h1> Employee List</h1>
+<form  action="/employee?action=search" class="row g-3 d-fex justify-content-end"  method="get">
+    <input type="text" name="action" value="search" hidden>
+    <div class="col-auto">
+        <input type="text" name="searchName" class="form-control" placeholder="Name">
+    </div>
+    <div class="col-auto">
+        <input type="text" name="searchEmail" class="form-control" placeholder="Email">
+    </div>
+    <div class="col-auto">
+        <select class="form-select" name="searchPositionIdName">
+            <option selected value="">Select Position</option>
+            <c:forEach var="position" items="${position}">
+                <option value="${position.positionName}">${position.positionName}</option>
+            </c:forEach>
+        </select>
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-outline-primary mb-3">Search</button>
+    </div>
+</form>
 <table class="table table-striped" border=1 style="border: 1px solid black">
     <tr>
         <th>Id</th>
@@ -26,11 +47,11 @@
         <th>Phone Number</th>
         <th>Email</th>
         <th>Address</th>
-        <th> Action</th>
-        <%--    <th>Position</th>--%>
+              <th>Position</th>
         <%--    <th>Education Degree Id</th>--%>
         <%--    <th>Division</th>--%>
         <th>User Name</th>
+        <th> Action</th>
     </tr>
     <c:forEach var="employeeList" items="${employeeList}">
         <tr>
@@ -42,7 +63,7 @@
             <td>${employeeList.getPhoneNumber()}</td>
             <td>${employeeList.getEmail()}</td>
             <td>${employeeList.getAddress()}</td>
-                <%--            <td><c:out value="${employeeList.getPositionId()}"></c:out></td>--%>
+            <td>${employeeList.getPositionIdName()}</td>
                 <%--            <td><c:out value="${employeeList.getEducationDegreeId()}"></c:out></td>--%>
                 <%--            <td><c:out value="${employeeList.getDivisionId()}"></c:out></td>--%>
             <td>${employeeList.getUserName()}</td>

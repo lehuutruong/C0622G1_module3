@@ -1,5 +1,6 @@
 package repository.impl;
 
+import dto.EmployeeDto;
 import model.Employee;
 import repository.IEmployeeRepository;
 
@@ -15,11 +16,11 @@ public class EmployeeRepository implements IEmployeeRepository {
 
     private static final String INSERT_EMPLOYEE_SQL = "insert into employee (name,date_of_birth,id_card,salary,phone_number,email,address,position_id,education_degree_id,division_id,username) values(?,?,?,?,?,?,?,?,?,?,?);";
     private static final String SELECT_EMPLOYEE_BY_ID = "select * from employee where id = ?;";
-    //    private static final String SELECT_USER_BY_COUNTRY = "select * from users where country like ?";
     private static final String SELECT_ALL_EMPLOYEE = "select * from employee;";
-        private static final String DELETE_EMPLOYEE_SQL = "delete from employee where id = ?;";
+    private static final String DELETE_EMPLOYEE_SQL = "delete from employee where id = ?;";
     private static final String UPDATE_EMPLOYEE_SQL = "update employee set name = ?,date_of_birth = ?,id_card = ?,salary = ?,phone_number = ?,email = ?,address = ?,position_id = ?,education_degree_id = ?,division_id = ?,username = ? where id = ?;";
-//    private static final String SORT_NAME = "select * from users order by name;";
+    private static final String SELECT_ALL_EMPLOYEE_DTO = "select e.*,p.name as position_name from employee e join position p on e.position_id=p.id;";
+    private static final String SEARCH = "select e.*,p.name as position_name from employee e left join position p on e.position_id=p.id where e.name like ? and e.email like ? and p.name like ?;";
 
     public EmployeeRepository() {
     }
@@ -121,13 +122,13 @@ public class EmployeeRepository implements IEmployeeRepository {
 
     @Override
     public Employee selectEmployee(int id) {
-        Employee employee=null;
-        Connection connection=getConnection();
+        Employee employee = null;
+        Connection connection = getConnection();
         try {
-            PreparedStatement preparedStatement=connection.prepareStatement(SELECT_EMPLOYEE_BY_ID);
-            preparedStatement.setInt(1,id);
-            ResultSet rs=preparedStatement.executeQuery();
-            while (rs.next()){
+            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_EMPLOYEE_BY_ID);
+            preparedStatement.setInt(1, id);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
                 String name = rs.getString("name");
                 String dateOfBirth = rs.getString("date_of_birth");
                 String idCard = rs.getString("id_card");
@@ -135,11 +136,11 @@ public class EmployeeRepository implements IEmployeeRepository {
                 String phoneNumber = rs.getString("phone_number");
                 String email = rs.getString("email");
                 String address = rs.getString("address");
-                int positionId = rs.getInt("position_id");
+                int positionId = rs.getInt("position_name");
                 int educationDegreeId = rs.getInt("education_degree_id");
                 int divisionId = rs.getInt("division_id");
                 String userName = rs.getString("username");
-                employee=new Employee(name,dateOfBirth,idCard,salary,phoneNumber,email,address,positionId,educationDegreeId,divisionId,userName);
+                employee = new Employee(name, dateOfBirth, idCard, salary, phoneNumber, email, address, positionId, educationDegreeId, divisionId, userName);
 
             }
 
@@ -163,15 +164,77 @@ public class EmployeeRepository implements IEmployeeRepository {
 
     @Override
     public void deleteEmployeeList(int id) {
-        Connection connection=getConnection();
+        Connection connection = getConnection();
         try {
-            PreparedStatement preparedStatement=connection.prepareStatement(DELETE_EMPLOYEE_SQL);
-            preparedStatement.setInt(1,id);
+            PreparedStatement preparedStatement = connection.prepareStatement(DELETE_EMPLOYEE_SQL);
+            preparedStatement.setInt(1, id);
             preparedStatement.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
 
+    }
+
+    @Override
+    public List<EmployeeDto> findAll() {
+        Connection connection = getConnection();
+        List<EmployeeDto> employeeDtoList = new ArrayList<>();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_EMPLOYEE_DTO);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                String dateOfBirth = resultSet.getString("date_of_birth");
+                String idCard = resultSet.getString("id_card");
+                Double salary = resultSet.getDouble("salary");
+                String phoneNumber = resultSet.getString("phone_number");
+                String email = resultSet.getString("email");
+                String address = resultSet.getString("address");
+                String positionIdName = resultSet.getString("position_name");
+                int educationDegreeId = resultSet.getInt("education_degree_id");
+                int divisionId = resultSet.getInt("division_id");
+                String userName = resultSet.getString("username");
+                EmployeeDto employeeDto = new EmployeeDto(id, name, dateOfBirth, idCard, salary, phoneNumber, email, address, positionIdName, educationDegreeId, divisionId, userName);
+                employeeDtoList.add(employeeDto);
+            }
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return employeeDtoList;
+    }
+
+    @Override
+    public List<EmployeeDto> search(String searchName, String searchEmail, String searchPositionIdName) {
+        List<EmployeeDto> employeeDto = new ArrayList<>();
+        Connection connection = getConnection();
+        try {
+            PreparedStatement pr = connection.prepareStatement(SEARCH);
+            pr.setString(1, "%" + searchName + "%");
+            pr.setString(2, "%" + searchEmail + "%");
+            pr.setString(3, "%" + searchPositionIdName + "%");
+            ResultSet resultSet = pr.executeQuery();
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                String dateOfBirth = resultSet.getString("date_of_birth");
+                String idCard = resultSet.getString("id_card");
+                Double salary = resultSet.getDouble("salary");
+                String phoneNumber = resultSet.getString("phone_number");
+                String email = resultSet.getString("email");
+                String address = resultSet.getString("address");
+                String positionIdName = resultSet.getString("position_name");
+                int educationDegreeId = resultSet.getInt("education_degree_id");
+                int divisionId = resultSet.getInt("division_id");
+                String userName = resultSet.getString("username");
+                EmployeeDto employeeDtoList = new EmployeeDto(id, name, dateOfBirth, idCard, salary, phoneNumber, email, address, positionIdName, educationDegreeId, divisionId, userName);
+                employeeDto.add(employeeDtoList);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return employeeDto;
     }
 
 }

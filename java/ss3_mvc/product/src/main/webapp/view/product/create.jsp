@@ -18,11 +18,12 @@
 </head>
 <body>
 <h1>Create new product</h1>
-<p>
-    <c:if test='${requestScope["message"] != null}'>
-        <span class="message">${requestScope["message"]}</span>
-    </c:if>
-</p>
+<% if(request.getParameter("existUsername")!=null){
+    %>
+<p>User exist</p>
+<%
+}
+%>
 <p>
     <a href="/product">Back to customer list</a>
 </p>
@@ -32,19 +33,19 @@
         <table>
             <tr>
                 <td>ID: </td>
-                <td><input type="text" name="id" id="id"></td>
+                <td><input type="text" name="id" id="id" value="<%=request.getParameter("id")==null?"":request.getParameter("id")%>"></td>
             </tr>
             <tr>
                 <td>Name: </td>
-                <td><input type="text" name="name" id="name"></td>
+                <td><input type="text" name="name" id="name" value="<%=request.getParameter("name")==null?"":request.getParameter("name")%>"></td>
             </tr>
             <tr>
-                <td>price: </td>
-                <td><input type="text" name="price" id="price"></td>
+                <td>Price:</td>
+                <td><input type="number" name="price" id="price" value="<%=request.getParameter("price")==null?"":request.getParameter("price")%>"></td>
             </tr>
             <tr>
                 <td>product company: </td>
-                <td><input type="text" name="productCompany" id="productCompany"></td>
+                <td><input type="text" name="productCompany" id="productCompany"value="<%=request.getParameter("productCompany")==null?"":request.getParameter("productCompany")%>"></td>
             </tr>
             <tr>
                 <td></td>

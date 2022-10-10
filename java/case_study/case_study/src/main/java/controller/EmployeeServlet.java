@@ -1,7 +1,9 @@
 package controller;
 
+import dto.EmployeeDto;
 import model.Employee;
 import service.impl.EmployeeService;
+import service.impl.PositionService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -17,6 +19,7 @@ import java.util.List;
 @WebServlet(name = "EmployeeServlet", urlPatterns = "/employee")
 public class EmployeeServlet extends HttpServlet {
     private EmployeeService employeeService = new EmployeeService();
+    private PositionService positionService = new PositionService();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
@@ -45,7 +48,7 @@ public class EmployeeServlet extends HttpServlet {
         int educationDegreeId = Integer.parseInt(request.getParameter("educationDegreeId"));
         int divisionId = Integer.parseInt(request.getParameter("divisionId"));
         String userName = request.getParameter("userName");
-        Employee book = new Employee(id,name, dateOfBirth, idCard, salary, phoneNumber, email, address, positionId, educationDegreeId, divisionId, userName);
+        Employee book = new Employee(id, name, dateOfBirth, idCard, salary, phoneNumber, email, address, positionId, educationDegreeId, divisionId, userName);
         employeeService.updateEmployee(book);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/view/edit.jsp");
         try {
@@ -70,10 +73,13 @@ public class EmployeeServlet extends HttpServlet {
                 addEmployeeForm(request, response);
                 break;
             case "delete":
-                deleteEmployeeList(request,response);
+                deleteEmployeeList(request, response);
                 break;
             case "edit":
                 showEditForm(request, response);
+                break;
+            case "search":
+                search(request, response);
                 break;
             default:
                 showEmployeeList(request, response);
@@ -81,21 +87,27 @@ public class EmployeeServlet extends HttpServlet {
         }
     }
 
-    private void deleteEmployeeList(HttpServletRequest request, HttpServletResponse response) {
-        int id=Integer.parseInt(request.getParameter("id"));
-        employeeService.deleteEmployeeList(id);
-        showEmployeeList(request,response);
+    private void search(HttpServletRequest request, HttpServletResponse response) {
+        String searchName = request.getParameter("searchName");
+        String searchEmail = request.getParameter("searchEmail");
+        String searchPositionIdName = request.getParameter("searchPositionIdName");
+        request.setAttribute("position", positionService.findAllPosition());
+        List<EmployeeDto> employeeDtoList = employeeService.search(searchName,searchEmail,searchPositionIdName);
+         request.setAttribute("searchEmployee",employeeDtoList);
+        try {
+            request.getRequestDispatcher("/view/employeeList.jsp").forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-//    private void deleteEmployee(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
-//        int id = Integer.parseInt(request.getParameter("id"));
-//        employeeService.deleteEmployee(id);
-//
-//        List<Employee> employeeList = employeeService.showEmployeeList();
-//        request.setAttribute("employeeList", employeeList);
-//        RequestDispatcher dispatcher = request.getRequestDispatcher("view/employeeList.jsp");
-//        dispatcher.forward(request, response);
-//    }
+    private void deleteEmployeeList(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        employeeService.deleteEmployeeList(id);
+        showEmployeeList(request, response);
+    }
 
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
@@ -142,7 +154,8 @@ public class EmployeeServlet extends HttpServlet {
     }
 
     private void showEmployeeList(HttpServletRequest request, HttpServletResponse response) {
-        List<Employee> employeeList = employeeService.showEmployeeList();
+//        List<Employee> employeeList = employeeService.showEmployeeList();
+        List<EmployeeDto> employeeList = employeeService.findAll();
         request.setAttribute("employeeList", employeeList);
         try {
             request.getRequestDispatcher("view/employeeList.jsp").forward(request, response);

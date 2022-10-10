@@ -32,7 +32,7 @@
             <td>${product.price}</td>
             <td>${product.productCompany}</td>
             <td><a href="/product?action=edit&id=${product.getId()}">edit</a></td>
-            <td><a href="/product?action=delete&id=${product.getId()}">delete</a></td>
+            <td><a href="/product?action=delete&id=${product.getId()}" onclick="return confirm('are you sure want to delete?')">delete</a></td>
         </tr>
     </c:forEach>
 </table>

@@ -1,5 +1,6 @@
 package service.impl;
 
+import dto.EmployeeDto;
 import model.Employee;
 import repository.impl.EmployeeRepository;
 import service.IEmployeeService;
@@ -37,5 +38,15 @@ public class EmployeeService  implements IEmployeeService {
     @Override
     public void deleteEmployeeList(int id) {
         employeeRepository.deleteEmployeeList(id);
+    }
+
+    @Override
+    public List<EmployeeDto> findAll() {
+        return employeeRepository.findAll();
+    }
+
+    @Override
+    public List<EmployeeDto> search(String searchName, String searchEmail, String searchPositionIdName) {
+        return employeeRepository.search(searchName,searchEmail,searchPositionIdName);
     }
 }

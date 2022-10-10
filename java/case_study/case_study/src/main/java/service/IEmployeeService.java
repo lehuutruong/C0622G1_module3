@@ -1,5 +1,6 @@
 package service;
 
+import dto.EmployeeDto;
 import model.Employee;
 
 import java.sql.SQLException;
@@ -12,5 +13,6 @@ public interface IEmployeeService {
     Employee selectEmployee(int id);
     boolean deleteEmployee(int id) throws SQLException;
     void deleteEmployeeList(int id);
-
+    List<EmployeeDto> findAll();
+    List<EmployeeDto> search(String searchName,String searchEmail,String searchPositionIdName);
 }
